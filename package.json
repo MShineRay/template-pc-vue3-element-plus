@@ -1,44 +1,19 @@
 {
-  "name": "template-pc-vue2-elementui",
+  "name": "template-pc-vue3-element-plus-ts",
   "version": "0.0.1",
-  "private": true,
   "scripts": {
-    "mock": "vue-cli-service serve --host mock.local.fe.cn --port 50010 --open",
-    "dev": "vue-cli-service serve --host dev.local.fe.cn --port 50010 --open",
-    "test": "vue-cli-service serve --host test.local.fe.cn --port 50010 --open",
-    "sit": "vue-cli-service serve --host sit.local.fe.cn --port 50010 --open",
-    "uat": "vue-cli-service serve --host uat.local.fe.cn --port 50010 --open",
-    "pre": "vue-cli-service serve --host pre.local.fe.cn --port 50010 --open",
-    "build": "vue-cli-service build",
-    "build:analyse": "cross-env analyse=true  vue-cli-service build",
-    "lint": "vue-cli-service lint --no-fix",
-    "dll": "webpack -p --progress --config ./webpack.dll.conf.js"
+    "dev": "vite",
+    "build": "vue-tsc --noEmit && vite build",
+    "preview": "vite preview"
   },
   "dependencies": {
-    "core-js": "^3.6.5",
-    "element-ui": "^2.15.2",
-    "vue": "^2.6.11",
-    "vue-router": "^3.2.0",
-    "vuex": "^3.4.0"
+    "vue": "^3.2.25"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "~4.5.0",
-    "@vue/cli-plugin-eslint": "~4.5.0",
-    "@vue/cli-plugin-router": "~4.5.0",
-    "@vue/cli-plugin-vuex": "~4.5.0",
-    "@vue/cli-service": "~4.5.0",
-    "@vue/eslint-config-prettier": "^6.0.0",
-    "add-asset-html-webpack-plugin": "^3.2.0",
-    "axios": "^0.21.1",
-    "babel-eslint": "^10.1.0",
-    "eslint": "^6.7.2",
-    "eslint-plugin-prettier": "^3.3.1",
-    "eslint-plugin-vue": "^6.2.2",
-    "node-sass": "^4.12.0",
-    "prettier": "^2.2.1",
-    "sass-loader": "^8.0.2",
-    "vue-axios": "^3.2.4",
-    "vue-template-compiler": "^2.6.11"
-  },
-  "dllPath": "public/vendor"
+    "@vitejs/plugin-vue": "^2.0.0",
+    "sass": "^1.45.1",
+    "typescript": "^4.4.4",
+    "vite": "^2.7.2",
+    "vue-tsc": "^0.29.8"
+  }
 }
